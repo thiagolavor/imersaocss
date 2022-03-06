@@ -1,0 +1,136 @@
+/*reset do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: #1e90ff; */
+  background-image: url(../img/fundo.jpg);
+  font-family: 'Source Code Pro', monospace;
+  background-size: auto 100vh;
+  height: 100vh;
+  font-size: 10px;
+}
+/*se a tela tiver pelo menos 400px vai carregar estes estilos*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-widtj: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.site-subtitle {
+  font-style: italic;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.8em;
+}
+
+.nome {
+  display: flex;
+  align-items: center;
+}
+
+.portifolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portifolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portifolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(2, 240px);
+    justify-content: center;
+  }
+}
+@media (min-width: 880px) {
+  .portifolio .grid {
+    align-content: center;
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portifolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 5%;
+}
